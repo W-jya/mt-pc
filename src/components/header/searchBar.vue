@@ -58,11 +58,11 @@ export default {
     }
   },
   methods: {
-    // 搜索框聚焦事件
+
     focus() {
       this.isfocus = true;
     },
-    // 搜索框失焦事件
+
     blur() {
       setTimeout(() => {
         this.isfocus = false;
