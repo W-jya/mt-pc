@@ -8,14 +8,14 @@ import Index from '@/page/index.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
       name: 'defaultPage',
       component: defaultPage,
       redirect: '/index',
-      children: [
-        {
+      children: [{
           path: 'index',
           name: 'index',
           component: Index,
@@ -27,12 +27,10 @@ export default new Router({
         },
         {
           path: 's/:name',
-          name: 'goodlost',
+          name: 'goodlist',
           component: () => import('@/page/goodList')
-        }
-      ]
-    },
-    {
+        }]
+    },{
       path: '/blank',
       name: 'blank',
       component: blankPage,
@@ -46,8 +44,7 @@ export default new Router({
           path: 'register',
           name: 'register',
           component: () => import('@/page/register')
-        }
-      ]
+        }]
     }
   ]
 })

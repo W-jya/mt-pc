@@ -16,7 +16,7 @@
           <dl class="hotPlace" v-if="isHotPlace">
             <dt>热门搜索</dt>
             <dd v-for="(item, index) in hotPlace" :key="index">
-              <router-link to="/s">{{item}}</router-link>
+              <router-link :to="{name:'goodlist', params: {name: item}}" >{{item}}</router-link>
             </dd>
           </dl>
 
