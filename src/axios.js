@@ -4,7 +4,7 @@ axios.interceptors.request.use((config) => {
   //在发送请求之前做某件事
   config.params = {
     ...config.params,
-    appkey: 'xiebug_1561951783879', 
+    appkey: 'W_jy_1547734940297', 
   }
   return config;
 },(error) =>{
